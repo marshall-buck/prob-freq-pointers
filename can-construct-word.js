@@ -9,6 +9,12 @@
  (if w is the length of word and k is the length of letters)
  */
 
+/**
+ *
+ * accepts two strings, words and letters and returns true if
+ * word can be built from letters, otherwise returns false
+ */
+
 function canConstructWord(word, letters) {
   if (letters.length === 0) return false;
   const wordFreq = getFrequencyCounter(word);
