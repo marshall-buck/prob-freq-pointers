@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 /**
  *  Make a freq counter for both inputs
  *  if freq of chars in letters is less than  to freq
@@ -17,6 +17,7 @@
  */
 
 function canConstructWord(word, letters) {
+  // word > letters
   if (letters.length === 0) return false;
   const wordFreq = getFrequencyCounter(word);
   const lettersFreq = getFrequencyCounter(letters);

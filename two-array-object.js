@@ -1,9 +1,10 @@
-"use strict"
+"use strict";
 
 // add whatever parameters you deem necessary & write docstring
 /**
  * takes two arrays, one of keys and one of values
- * returns an object of the keys and values
+ * returns an object of the keys and values, value will be null if
+ * values array is larger than keys
  */
 
 /**
@@ -12,18 +13,22 @@
  * iterate through keys and add to object
  */
 function twoArrayObject(keys, values) {
-  let obj = {};
+  let keysAndValuesObject
+    = {};
 
-  if(keys.length > values.length){
-    for(let i = values.length - 1; i < keys.length; i++){
-      values.push(null);
+
+  for (let i = 0; i < keys.length; i++) {
+    if (values[i]) {
+      keysAndValuesObject
+      [keys[i]] = values[i];
+    } else {
+      keysAndValuesObject
+      [keys[i]] = null;
     }
+
   }
 
-  for(let key of keys){
-    obj[key] = values.shift();
-  }
-
-  return obj;
+  return keysAndValuesObject
+    ;
 
 }

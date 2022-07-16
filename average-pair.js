@@ -1,3 +1,5 @@
+"use-strict";
+
 // add whatever parameters you deem necessary & write docstring
 /**
  * Checking if two numbers average in array nums is equal to
@@ -16,16 +18,16 @@
  */
 function averagePair(nums, targetAvg) {
   let left = 0;
-  let right = nums.length-1;
+  let right = nums.length - 1;
 
-  while(left < right){
+  while (left < right) {
     const avg = (nums[left] + nums[right]) / 2;
 
-    if(avg === targetAvg){
+    if (avg === targetAvg) {
       return true;
-    } else if(avg > targetAvg){
+    } else if (avg > targetAvg) {
       right--;
-    } else{
+    } else {
       left++;
     }
   }
